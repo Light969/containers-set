@@ -29,6 +29,34 @@ test('Проверка на дублирование персонажа', () => 
   expect(() => team.add(unit)).toThrow(new Error('Персонаж уже присутствует'));
 });
 
+// Тест не обязателен, т.к. есть следующий тест.
+// test('Добавляем нескольких персонажей - метод addAll', () => {
+//   const team = new Team('angels');
+//   const unit1 = new Character('hero-1');
+//   const unit2 = new Character('hero-2');
+//   const unit3 = new Character('hero-3');
+//   team.addAll(unit1, unit2, unit3);
+//   const result = {
+//     name: 'angels',
+//     members: new Set([{
+//       name: 'hero-1',
+//       level: 1,
+//       health: 100,
+//     },
+//     {
+//       name: 'hero-2',
+//       level: 1,
+//       health: 100,
+//     },
+//     {
+//       name: 'hero-3',
+//       level: 1,
+//       health: 100,
+//     }]),
+//   };
+//   expect(team).toEqual(result);
+// });
+
 test('Добавляем нескольких персонажей - метод addAll, задвоения быть не должно', () => {
   const team = new Team('angels');
   const unit1 = new Character('hero-1');
